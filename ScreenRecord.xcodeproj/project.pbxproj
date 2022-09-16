@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6ECFBB628D4CE89000978DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBB528D4CE89000978DF /* AppDelegate.m */; };
+		E6ECFBB928D4CE89000978DF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBB828D4CE89000978DF /* SceneDelegate.m */; };
+		E6ECFBBC28D4CE89000978DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBBB28D4CE89000978DF /* ViewController.m */; };
+		E6ECFBBF28D4CE89000978DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ECFBBD28D4CE89000978DF /* Main.storyboard */; };
+		E6ECFBC128D4CE8A000978DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ECFBC028D4CE8A000978DF /* Assets.xcassets */; };
+		E6ECFBC428D4CE8A000978DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ECFBC228D4CE8A000978DF /* LaunchScreen.storyboard */; };
+		E6ECFBC728D4CE8A000978DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBC628D4CE8A000978DF /* main.m */; };
+		E6ECFBEC28D4D3CC000978DF /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECFBEB28D4D3CC000978DF /* ReplayKit.framework */; };
+		E6ECFBF028D4D3CC000978DF /* SampleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBEF28D4D3CC000978DF /* SampleHandler.m */; };
+		E6ECFBF728D4D3CC000978DF /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECFBEB28D4D3CC000978DF /* ReplayKit.framework */; };
+		E6ECFBF928D4D3CC000978DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECFBF828D4D3CC000978DF /* UIKit.framework */; };
+		E6ECFBFD28D4D3CC000978DF /* BroadcastSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ECFBFC28D4D3CC000978DF /* BroadcastSetupViewController.m */; };
+		E6ECFC0128D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E6ECFBF628D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E6ECFC0428D4D3CC000978DF /* ScreenRecordExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E6ECFBEA28D4D3CC000978DF /* ScreenRecordExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6ECFBFF28D4D3CC000978DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6ECFBA928D4CE89000978DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6ECFBF528D4D3CC000978DF;
+			remoteInfo = ScreenRecordExtensionSetupUI;
+		};
+		E6ECFC0228D4D3CC000978DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6ECFBA928D4CE89000978DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6ECFBE928D4D3CC000978DF;
+			remoteInfo = ScreenRecordExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6ECFC0B28D4D3CC000978DF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E6ECFC0128D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex in Embed Foundation Extensions */,
+				E6ECFC0428D4D3CC000978DF /* ScreenRecordExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E6ECFBB128D4CE89000978DF /* ScreenRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6ECFBB428D4CE89000978DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E6ECFBB528D4CE89000978DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E6ECFBB728D4CE89000978DF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E6ECFBB828D4CE89000978DF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E6ECFBBA28D4CE89000978DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E6ECFBBB28D4CE89000978DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E6ECFBBE28D4CE89000978DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6ECFBC028D4CE8A000978DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6ECFBC328D4CE8A000978DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6ECFBC528D4CE8A000978DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6ECFBC628D4CE8A000978DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6ECFBCE28D4D2D4000978DF /* libyuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyuv.a; path = "../../Repository/libyuv-ios/build/iphoneos/libyuv.a"; sourceTree = "<group>"; };
+		E6ECFBD028D4D2E4000978DF /* libyuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libyuv.h; sourceTree = "<group>"; };
+		E6ECFBD228D4D2E4000978DF /* scale_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_row.h; sourceTree = "<group>"; };
+		E6ECFBD328D4D2E4000978DF /* scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale.h; sourceTree = "<group>"; };
+		E6ECFBD428D4D2E4000978DF /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		E6ECFBD528D4D2E4000978DF /* cpu_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_id.h; sourceTree = "<group>"; };
+		E6ECFBD628D4D2E4000978DF /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		E6ECFBD728D4D2E4000978DF /* compare_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare_row.h; sourceTree = "<group>"; };
+		E6ECFBD828D4D2E4000978DF /* mjpeg_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mjpeg_decoder.h; sourceTree = "<group>"; };
+		E6ECFBD928D4D2E4000978DF /* rotate_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_row.h; sourceTree = "<group>"; };
+		E6ECFBDA28D4D2E4000978DF /* planar_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planar_functions.h; sourceTree = "<group>"; };
+		E6ECFBDB28D4D2E4000978DF /* scale_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_argb.h; sourceTree = "<group>"; };
+		E6ECFBDC28D4D2E4000978DF /* compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare.h; sourceTree = "<group>"; };
+		E6ECFBDD28D4D2E4000978DF /* convert_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_argb.h; sourceTree = "<group>"; };
+		E6ECFBDE28D4D2E4000978DF /* rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate.h; sourceTree = "<group>"; };
+		E6ECFBDF28D4D2E4000978DF /* convert_from_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from_argb.h; sourceTree = "<group>"; };
+		E6ECFBE028D4D2E4000978DF /* basic_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basic_types.h; sourceTree = "<group>"; };
+		E6ECFBE128D4D2E4000978DF /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from.h; sourceTree = "<group>"; };
+		E6ECFBE228D4D2E4000978DF /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		E6ECFBE328D4D2E4000978DF /* rotate_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_argb.h; sourceTree = "<group>"; };
+		E6ECFBE428D4D2E4000978DF /* macros_msa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros_msa.h; sourceTree = "<group>"; };
+		E6ECFBE528D4D2E4000978DF /* row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = row.h; sourceTree = "<group>"; };
+		E6ECFBEA28D4D3CC000978DF /* ScreenRecordExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenRecordExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6ECFBEB28D4D3CC000978DF /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		E6ECFBEE28D4D3CC000978DF /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
+		E6ECFBEF28D4D3CC000978DF /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
+		E6ECFBF128D4D3CC000978DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6ECFBF628D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenRecordExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6ECFBF828D4D3CC000978DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E6ECFBFB28D4D3CC000978DF /* BroadcastSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BroadcastSetupViewController.h; sourceTree = "<group>"; };
+		E6ECFBFC28D4D3CC000978DF /* BroadcastSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastSetupViewController.m; sourceTree = "<group>"; };
+		E6ECFBFE28D4D3CC000978DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6ECFC0C28D4D3EB000978DF /* ScreenRecord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenRecord.entitlements; sourceTree = "<group>"; };
+		E6ECFC0D28D4D41A000978DF /* ScreenRecordExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenRecordExtension.entitlements; sourceTree = "<group>"; };
+		E6ECFC0E28D4D424000978DF /* ScreenRecordExtensionSetupUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenRecordExtensionSetupUI.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6ECFBAE28D4CE89000978DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBE728D4D3CC000978DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBEC28D4D3CC000978DF /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBF328D4D3CC000978DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBF728D4D3CC000978DF /* ReplayKit.framework in Frameworks */,
+				E6ECFBF928D4D3CC000978DF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6ECFBA828D4CE89000978DF = {
+			isa = PBXGroup;
+			children = (
+				E6ECFBB328D4CE89000978DF /* ScreenRecord */,
+				E6ECFBED28D4D3CC000978DF /* ScreenRecordExtension */,
+				E6ECFBFA28D4D3CC000978DF /* ScreenRecordExtensionSetupUI */,
+				E6ECFBB228D4CE89000978DF /* Products */,
+				E6ECFBCD28D4D2D4000978DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6ECFBB228D4CE89000978DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFBB128D4CE89000978DF /* ScreenRecord.app */,
+				E6ECFBEA28D4D3CC000978DF /* ScreenRecordExtension.appex */,
+				E6ECFBF628D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6ECFBB328D4CE89000978DF /* ScreenRecord */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFC0C28D4D3EB000978DF /* ScreenRecord.entitlements */,
+				E6ECFBCF28D4D2E4000978DF /* include */,
+				E6ECFBB428D4CE89000978DF /* AppDelegate.h */,
+				E6ECFBB528D4CE89000978DF /* AppDelegate.m */,
+				E6ECFBB728D4CE89000978DF /* SceneDelegate.h */,
+				E6ECFBB828D4CE89000978DF /* SceneDelegate.m */,
+				E6ECFBBA28D4CE89000978DF /* ViewController.h */,
+				E6ECFBBB28D4CE89000978DF /* ViewController.m */,
+				E6ECFBBD28D4CE89000978DF /* Main.storyboard */,
+				E6ECFBC028D4CE8A000978DF /* Assets.xcassets */,
+				E6ECFBC228D4CE8A000978DF /* LaunchScreen.storyboard */,
+				E6ECFBC528D4CE8A000978DF /* Info.plist */,
+				E6ECFBC628D4CE8A000978DF /* main.m */,
+			);
+			path = ScreenRecord;
+			sourceTree = "<group>";
+		};
+		E6ECFBCD28D4D2D4000978DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFBCE28D4D2D4000978DF /* libyuv.a */,
+				E6ECFBEB28D4D3CC000978DF /* ReplayKit.framework */,
+				E6ECFBF828D4D3CC000978DF /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6ECFBCF28D4D2E4000978DF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFBD028D4D2E4000978DF /* libyuv.h */,
+				E6ECFBD128D4D2E4000978DF /* libyuv */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E6ECFBD128D4D2E4000978DF /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFBD228D4D2E4000978DF /* scale_row.h */,
+				E6ECFBD328D4D2E4000978DF /* scale.h */,
+				E6ECFBD428D4D2E4000978DF /* version.h */,
+				E6ECFBD528D4D2E4000978DF /* cpu_id.h */,
+				E6ECFBD628D4D2E4000978DF /* video_common.h */,
+				E6ECFBD728D4D2E4000978DF /* compare_row.h */,
+				E6ECFBD828D4D2E4000978DF /* mjpeg_decoder.h */,
+				E6ECFBD928D4D2E4000978DF /* rotate_row.h */,
+				E6ECFBDA28D4D2E4000978DF /* planar_functions.h */,
+				E6ECFBDB28D4D2E4000978DF /* scale_argb.h */,
+				E6ECFBDC28D4D2E4000978DF /* compare.h */,
+				E6ECFBDD28D4D2E4000978DF /* convert_argb.h */,
+				E6ECFBDE28D4D2E4000978DF /* rotate.h */,
+				E6ECFBDF28D4D2E4000978DF /* convert_from_argb.h */,
+				E6ECFBE028D4D2E4000978DF /* basic_types.h */,
+				E6ECFBE128D4D2E4000978DF /* convert_from.h */,
+				E6ECFBE228D4D2E4000978DF /* convert.h */,
+				E6ECFBE328D4D2E4000978DF /* rotate_argb.h */,
+				E6ECFBE428D4D2E4000978DF /* macros_msa.h */,
+				E6ECFBE528D4D2E4000978DF /* row.h */,
+			);
+			path = libyuv;
+			sourceTree = "<group>";
+		};
+		E6ECFBED28D4D3CC000978DF /* ScreenRecordExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFC0D28D4D41A000978DF /* ScreenRecordExtension.entitlements */,
+				E6ECFBEE28D4D3CC000978DF /* SampleHandler.h */,
+				E6ECFBEF28D4D3CC000978DF /* SampleHandler.m */,
+				E6ECFBF128D4D3CC000978DF /* Info.plist */,
+			);
+			path = ScreenRecordExtension;
+			sourceTree = "<group>";
+		};
+		E6ECFBFA28D4D3CC000978DF /* ScreenRecordExtensionSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				E6ECFC0E28D4D424000978DF /* ScreenRecordExtensionSetupUI.entitlements */,
+				E6ECFBFB28D4D3CC000978DF /* BroadcastSetupViewController.h */,
+				E6ECFBFC28D4D3CC000978DF /* BroadcastSetupViewController.m */,
+				E6ECFBFE28D4D3CC000978DF /* Info.plist */,
+			);
+			path = ScreenRecordExtensionSetupUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6ECFBB028D4CE89000978DF /* ScreenRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6ECFBCA28D4CE8A000978DF /* Build configuration list for PBXNativeTarget "ScreenRecord" */;
+			buildPhases = (
+				E6ECFBAD28D4CE89000978DF /* Sources */,
+				E6ECFBAE28D4CE89000978DF /* Frameworks */,
+				E6ECFBAF28D4CE89000978DF /* Resources */,
+				E6ECFC0B28D4D3CC000978DF /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6ECFC0028D4D3CC000978DF /* PBXTargetDependency */,
+				E6ECFC0328D4D3CC000978DF /* PBXTargetDependency */,
+			);
+			name = ScreenRecord;
+			productName = ScreenRecord;
+			productReference = E6ECFBB128D4CE89000978DF /* ScreenRecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6ECFBE928D4D3CC000978DF /* ScreenRecordExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6ECFC0828D4D3CC000978DF /* Build configuration list for PBXNativeTarget "ScreenRecordExtension" */;
+			buildPhases = (
+				E6ECFBE628D4D3CC000978DF /* Sources */,
+				E6ECFBE728D4D3CC000978DF /* Frameworks */,
+				E6ECFBE828D4D3CC000978DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenRecordExtension;
+			productName = ScreenRecordExtension;
+			productReference = E6ECFBEA28D4D3CC000978DF /* ScreenRecordExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E6ECFBF528D4D3CC000978DF /* ScreenRecordExtensionSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6ECFC0528D4D3CC000978DF /* Build configuration list for PBXNativeTarget "ScreenRecordExtensionSetupUI" */;
+			buildPhases = (
+				E6ECFBF228D4D3CC000978DF /* Sources */,
+				E6ECFBF328D4D3CC000978DF /* Frameworks */,
+				E6ECFBF428D4D3CC000978DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenRecordExtensionSetupUI;
+			productName = ScreenRecordExtensionSetupUI;
+			productReference = E6ECFBF628D4D3CC000978DF /* ScreenRecordExtensionSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6ECFBA928D4CE89000978DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					E6ECFBB028D4CE89000978DF = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					E6ECFBE928D4D3CC000978DF = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					E6ECFBF528D4D3CC000978DF = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = E6ECFBAC28D4CE89000978DF /* Build configuration list for PBXProject "ScreenRecord" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6ECFBA828D4CE89000978DF;
+			productRefGroup = E6ECFBB228D4CE89000978DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6ECFBB028D4CE89000978DF /* ScreenRecord */,
+				E6ECFBE928D4D3CC000978DF /* ScreenRecordExtension */,
+				E6ECFBF528D4D3CC000978DF /* ScreenRecordExtensionSetupUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6ECFBAF28D4CE89000978DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBC428D4CE8A000978DF /* LaunchScreen.storyboard in Resources */,
+				E6ECFBC128D4CE8A000978DF /* Assets.xcassets in Resources */,
+				E6ECFBBF28D4CE89000978DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBE828D4D3CC000978DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBF428D4D3CC000978DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6ECFBAD28D4CE89000978DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBBC28D4CE89000978DF /* ViewController.m in Sources */,
+				E6ECFBB628D4CE89000978DF /* AppDelegate.m in Sources */,
+				E6ECFBC728D4CE8A000978DF /* main.m in Sources */,
+				E6ECFBB928D4CE89000978DF /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBE628D4D3CC000978DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBF028D4D3CC000978DF /* SampleHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ECFBF228D4D3CC000978DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECFBFD28D4D3CC000978DF /* BroadcastSetupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6ECFC0028D4D3CC000978DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6ECFBF528D4D3CC000978DF /* ScreenRecordExtensionSetupUI */;
+			targetProxy = E6ECFBFF28D4D3CC000978DF /* PBXContainerItemProxy */;
+		};
+		E6ECFC0328D4D3CC000978DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6ECFBE928D4D3CC000978DF /* ScreenRecordExtension */;
+			targetProxy = E6ECFC0228D4D3CC000978DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6ECFBBD28D4CE89000978DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6ECFBBE28D4CE89000978DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6ECFBC228D4CE8A000978DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6ECFBC328D4CE8A000978DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6ECFBC828D4CE8A000978DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6ECFBC928D4CE8A000978DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6ECFBCB28D4CE8A000978DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenRecord/ScreenRecord.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /Users/lining/Desktop/iOS_Project/ScreenRecord/ScreenRecord/include;
+				INFOPLIST_FILE = ScreenRecord/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "屏幕录制";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6ECFBCC28D4CE8A000978DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenRecord/ScreenRecord.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /Users/lining/Desktop/iOS_Project/ScreenRecord/ScreenRecord/include;
+				INFOPLIST_FILE = ScreenRecord/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "屏幕录制";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6ECFC0628D4D3CC000978DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenRecordExtensionSetupUI/ScreenRecordExtensionSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRecordExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenRecordExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord.ScreenRecordExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6ECFC0728D4D3CC000978DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenRecordExtensionSetupUI/ScreenRecordExtensionSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRecordExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenRecordExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord.ScreenRecordExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6ECFC0928D4D3CC000978DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenRecordExtension/ScreenRecordExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRecordExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenRecordExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord.ScreenRecordExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6ECFC0A28D4D3CC000978DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenRecordExtension/ScreenRecordExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855B44VF85;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRecordExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenRecordExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.ScreenRecord.ScreenRecordExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6ECFBAC28D4CE89000978DF /* Build configuration list for PBXProject "ScreenRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ECFBC828D4CE8A000978DF /* Debug */,
+				E6ECFBC928D4CE8A000978DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6ECFBCA28D4CE8A000978DF /* Build configuration list for PBXNativeTarget "ScreenRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ECFBCB28D4CE8A000978DF /* Debug */,
+				E6ECFBCC28D4CE8A000978DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6ECFC0528D4D3CC000978DF /* Build configuration list for PBXNativeTarget "ScreenRecordExtensionSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ECFC0628D4D3CC000978DF /* Debug */,
+				E6ECFC0728D4D3CC000978DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6ECFC0828D4D3CC000978DF /* Build configuration list for PBXNativeTarget "ScreenRecordExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ECFC0928D4D3CC000978DF /* Debug */,
+				E6ECFC0A28D4D3CC000978DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6ECFBA928D4CE89000978DF /* Project object */;
+}
