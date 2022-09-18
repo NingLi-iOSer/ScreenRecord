@@ -7,11 +7,22 @@
 
 
 #import "SampleHandler.h"
+#import "ScreenRecordClient.h"
+#import "SRAudioHandler.h"
+
+@interface SampleHandler () <ScreenRecordClientDelegate>
+
+@end
 
 @implementation SampleHandler
 
 - (void)broadcastStartedWithSetupInfo:(NSDictionary<NSString *,NSObject *> *)setupInfo {
-    // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional. 
+    NSError *error = [[ScreenRecordClient shareInstance] startService];
+    if (error) {
+        [self finishBroadcastWithError:error];
+        return;
+    }
+    [ScreenRecordClient shareInstance].delegate = self;
 }
 
 - (void)broadcastPaused {
@@ -24,6 +35,7 @@
 
 - (void)broadcastFinished {
     // User has requested to finish the broadcast.
+    [[ScreenRecordClient shareInstance] stopService];
 }
 
 - (void)processSampleBuffer:(CMSampleBufferRef)sampleBuffer withType:(RPSampleBufferType)sampleBufferType {
@@ -32,8 +44,12 @@
         case RPSampleBufferTypeVideo:
             // Handle video sample buffer
             break;
-        case RPSampleBufferTypeAudioApp:
-            // Handle audio sample buffer for app audio
+        case RPSampleBufferTypeAudioApp: {
+            @autoreleasepool {
+                SRAudioInfo *audioInfo = [SRAudioHandler handleSampleBuffer:sampleBuffer];
+                [[ScreenRecordClient shareInstance] sendAudioData:audioInfo];
+            }
+        }
             break;
         case RPSampleBufferTypeAudioMic:
             // Handle audio sample buffer for mic audio
@@ -42,6 +58,12 @@
         default:
             break;
     }
+}
+
+#pragma mark - ScreenRecordClientDelegate
+
+- (void)client:(ScreenRecordClient *)client didDisconnectWithError:(NSError *)error {
+    [self finishBroadcastWithError:error];
 }
 
 @end

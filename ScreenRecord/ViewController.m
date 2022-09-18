@@ -7,15 +7,21 @@
 
 #import "ViewController.h"
 #import <ReplayKit/ReplayKit.h>
+#import "ScreenRecordServer.h"
+#import "SRAudioPlayer.h"
 
-@interface ViewController ()
+@interface ViewController () <ScreenRecordServerDelegate>
 
 @property (nonatomic, strong) RPSystemBroadcastPickerView *broadcastPickerView;
 @property (nonatomic, strong) UIButton *screenRecordButton;
+@property (nonatomic, copy) NSString *filePath;
+@property (nonatomic, strong) SRAudioPlayer *player;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    AudioStreamBasicDescription _audioDesc;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +41,29 @@
     self.screenRecordButton.center = self.view.center;
     [self.screenRecordButton addTarget:self action:@selector(screenRecordStateChanged:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.screenRecordButton];
+    
+    UIButton *playButton = [[UIButton alloc] init];
+    [playButton setTitle:@"开始播放" forState:UIControlStateNormal];
+    [playButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [playButton setTitle:@"停止播放" forState:UIControlStateSelected];
+    playButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    playButton.backgroundColor = UIColor.orangeColor;
+    playButton.layer.cornerRadius = 4;
+    playButton.frame = CGRectOffset(self.screenRecordButton.frame, 0, 100);
+    [playButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:playButton];
+    
+    [ScreenRecordServer shareInstance].delegate = self;
+    
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    self.filePath = [docDir stringByAppendingPathComponent:@"audio.pcm"];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:self.filePath]) {
+        [manager removeItemAtPath:self.filePath error:NULL];
+    }
+    [manager createFileAtPath:self.filePath contents:nil attributes:nil];
+    
+    self.player = [[SRAudioPlayer alloc] initWithFilePath:self.filePath];
 }
 
 - (void)screenRecordStateChanged:(UIButton *)sender {
@@ -45,10 +74,32 @@
                 break;
             }
         }
+        [[ScreenRecordServer shareInstance] startService];
+    } else {
+        [[ScreenRecordServer shareInstance] stopService];
     }
     
     sender.selected = !sender.isSelected;
 }
 
+- (void)playAudio:(UIButton *)sender {
+    if (!sender.isSelected) {
+        [self.player play:_audioDesc];
+    } else {
+        [self.player stop];
+    }
+    sender.selected = !sender.isSelected;
+}
+
+#pragma mark - ScreenRecordServerDelegate
+
+- (void)server:(ScreenRecordServer *)server didReceiveAudioData:(NSData *)data audioDesc:(AudioStreamBasicDescription)audioDesc {
+    _audioDesc = audioDesc;
+    
+    NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:self.filePath];
+    [handle seekToEndOfFile];
+    [handle writeData:data];
+    [handle closeFile];
+}
 
 @end
